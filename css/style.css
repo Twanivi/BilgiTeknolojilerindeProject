@@ -28,13 +28,13 @@ header {
   right: 0;
   left: 0;
 }
-header .container {
+header .nav {
   padding-top: 35px;
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
 }
-header .container .nav-menu {
+header .nav .nav-menu {
   background-image: url(../images/menu.svg);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -44,30 +44,58 @@ header .container .nav-menu {
   display: none;
 }
 @media (max-width: 860px) {
-  header .container .nav-menu {
+  header .nav .nav-menu {
     display: block;
     position: absolute;
     top: 35px;
     left: 20px;
   }
 }
-header .container nav,
-header .container nav li,
-header .container button {
+header .nav nav,
+header .nav nav li,
+header .nav button {
   display: inline-block;
 }
 @media (max-width: 860px) {
-  header .container nav ul {
+  header .nav .nav-list {
     display: none;
   }
 }
-header .container nav ul li {
+header .nav .nav-list.open {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background: rgba(65, 65, 65, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+header .nav .nav-list.open li {
+  width: 100%;
+  margin-left: 0;
+}
+header .nav .nav-list.open a {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  color: white;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+header .nav .nav-list.open a:hover {
+  background-color: rgba(255, 255, 255, 0.223);
+}
+header .nav nav ul li {
   color: #000;
   font-size: 14px;
   font-weight: 700;
   margin-left: 40px;
 }
-header .container button {
+header .nav button {
   margin-left: 40px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -86,12 +114,14 @@ main .title {
   padding-top: 200px;
   padding-bottom: 148px;
 }
-@media (max-width: 710px) {
+@media (max-width: 750px) {
   main .title {
     background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)), url(../images/back-header.png);
     background-position: 70%;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 130px;
+    padding-bottom: 100px;
   }
 }
 main .title h1 {
@@ -107,7 +137,7 @@ main .title h1 {
     line-height: 74px;
   }
 }
-@media (max-width: 710px) {
+@media (max-width: 750px) {
   main .title h1 {
     max-width: 333px;
     text-align: center;
@@ -131,7 +161,7 @@ main .title .title__text {
     line-height: 28px;
   }
 }
-@media (max-width: 710px) {
+@media (max-width: 750px) {
   main .title .title__text {
     max-width: 335px;
     font-size: 12px;
@@ -209,6 +239,12 @@ main .main-info .main-info__box {
   padding-top: 120px;
   padding-bottom: 140px;
 }
+@media (max-width: 830px) {
+  main .main-info .main-info__box {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 main .main-info .main-info__box h2 {
   text-align: center;
   max-width: 428px;
@@ -246,6 +282,7 @@ main .main-info .main-info__box .main-info__txt {
     max-width: 334px;
     font-size: 12px;
     line-height: 22px;
+    margin-bottom: 60px;
   }
 }
 main .main-info .main-info__box .main-info__wrapper {
@@ -265,6 +302,7 @@ main .main-info .main-info__box .main-info__wrapper {
 @media (max-width: 830px) {
   main .main-info .main-info__box .main-info__wrapper {
     max-width: 355px;
+    row-gap: 60px;
   }
 }
 main .main-info .main-info__box .main-info__wrapper .main-info__card {
@@ -288,12 +326,22 @@ main .main-info .main-info__box .main-info__wrapper .main-info__card h3 {
   font-weight: 800;
   line-height: auto;
 }
+@media (max-width: 830px) {
+  main .main-info .main-info__box .main-info__wrapper .main-info__card h3 {
+    font-size: 18px;
+  }
+}
 main .main-info .main-info__box .main-info__wrapper .main-info__card p {
   letter-spacing: 0.2px;
   color: #000;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
+}
+@media (max-width: 830px) {
+  main .main-info .main-info__box .main-info__wrapper .main-info__card p {
+    font-size: 12px;
+  }
 }
 main .test {
   background: #F8464A;
@@ -737,7 +785,7 @@ main .result {
 }
 @media (max-width: 730px) {
   main .result {
-    padding: 90px 0 82px;
+    padding: 62px 0 62px;
   }
 }
 @media (max-width: 730px) {
