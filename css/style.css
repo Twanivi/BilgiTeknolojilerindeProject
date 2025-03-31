@@ -376,6 +376,12 @@ main .test .container h2 {
     line-height: 47px;
   }
 }
+@media (max-width: 830px) {
+  main .test .container h2 {
+    font-size: 24px;
+    line-height: 40px;
+  }
+}
 main .test .container .test__heading-txt {
   max-width: 836px;
   margin: auto;
@@ -399,6 +405,11 @@ main .test .container .test__heading-txt {
     line-height: 32px;
   }
 }
+@media (max-width: 830px) {
+  main .test .container .test__heading-txt {
+    margin-bottom: 34px;
+  }
+}
 main .test .container .test__course {
   display: flex;
   justify-content: space-around;
@@ -410,6 +421,11 @@ main .test .container .test__course {
     text-align: center;
     row-gap: 40px;
     margin: auto;
+  }
+}
+@media (max-width: 830px) {
+  main .test .container .test__course {
+    row-gap: 30px;
   }
 }
 main .test .container .test__course p {
@@ -574,7 +590,7 @@ main .choice .container .choice__wrapper h2 {
 @media (max-width: 550px) {
   main .choice .container .choice__wrapper h2 {
     max-width: 100%;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 42px;
   }
 }
@@ -606,6 +622,7 @@ main .choice .container .choice__wrapper p {
   main .choice .container .choice__wrapper p {
     max-width: 100%;
     margin-bottom: 40px;
+    font-size: 12px;
   }
 }
 main .choice .container .choice__wrapper button {
@@ -677,7 +694,7 @@ main .logo .container h2 {
 @media (max-width: 630px) {
   main .logo .container h2 {
     color: #000;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 42px;
   }
@@ -849,7 +866,8 @@ footer {
 }
 @media (max-width: 800px) {
   footer {
-    padding-bottom: 77px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 footer .container {
@@ -860,7 +878,7 @@ footer .container {
 }
 @media (max-width: 800px) {
   footer .container {
-    row-gap: 30px;
+    row-gap: 25px;
   }
 }
 footer .container .list {
@@ -871,7 +889,7 @@ footer .container .list {
 }
 @media (max-width: 1250px) {
   footer .container .list {
-    gap: 49px;
+    gap: 30px;
   }
 }
 footer .container .list .nav-col1,
